@@ -1,0 +1,16 @@
+project_id = "uvnyzpleokzlpiszmuxr"
+
+[functions.generate-video]
+verify_jwt = false
+
+[functions.check-video-status]
+verify_jwt = false
+
+[functions.generate-image]
+verify_jwt = false
+
+[functions.chat-text]
+verify_jwt = false
+
+[functions.transcribe-audio]
+verify_jwt = false
