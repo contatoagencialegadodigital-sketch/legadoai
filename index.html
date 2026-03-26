@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#14b8a6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Legado AI" />
+    <title>Legado AI Studio</title>
+    <meta name="description" content="Transforme suas ideias em conteúdo incrível com o poder da IA. Crie vídeos, imagens e textos profissionais em segundos." />
+    <meta name="author" content="Legado AI Studio" />
+
+    <meta property="og:title" content="Legado AI Studio" />
+    <meta property="og:description" content="Transforme suas ideias em conteúdo incrível com o poder da IA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/icon-512.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Legado AI Studio" />
+    <meta name="twitter:description" content="Transforme suas ideias em conteúdo incrível com o poder da IA" />
+    <meta name="twitter:image" content="/icon-512.png" />
+    <script>
+      // Evitar flash de tema - executa antes do React carregar
+      (function() {
+        const theme = localStorage.getItem('theme') || 'system';
+        const root = document.documentElement;
+        
+        if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          root.classList.add('dark');
+        } else {
+          root.classList.remove('dark');
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
